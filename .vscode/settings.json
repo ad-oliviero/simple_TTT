@@ -1,0 +1,12 @@
+{
+	"files.associations": {
+		"raylib.h": "c",
+		"include.h": "c",
+		"main.h": "c",
+		"cross.h": "c",
+		"grid.h": "c",
+		"gameplay.h": "c",
+		"unistd.h": "c",
+		"iostream": "cpp"
+	}
+}

@@ -7,6 +7,7 @@
 		"grid.h": "c",
 		"gameplay.h": "c",
 		"unistd.h": "c",
-		"iostream": "cpp"
+		"iostream": "cpp",
+		"string.h": "c"
 	}
 }

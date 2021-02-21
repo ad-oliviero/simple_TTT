@@ -4,6 +4,7 @@
 	#include "include/raylib.h"
 #endif
 #include <stdio.h>
+#include <unistd.h>
 #include "include/gameplay.h"
 #include "include/gui.h"
 #include "include/main.h"

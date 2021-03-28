@@ -13,3 +13,6 @@ linux:
 
 windows:
 	x86_64-w64-mingw32-gcc -O3 $(src_dir)$(files) -o $(build_dir)$(name).exe $(flags_w64)
+
+clean:
+	rm ../$(name)*

@@ -1,6 +1,7 @@
 #!/bin/bash
 cd src
-make all
+../setup_raylib.sh
+make linux
 
 if [ $? != 0 ]
 then

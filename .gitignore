@@ -30,6 +30,8 @@
 *.dylib
 
 # Executables
+server
+Simple_TTT
 *.exe
 *.out
 *.app
@@ -51,7 +53,6 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
-
 
 # raylib folders
 lib/raygui/

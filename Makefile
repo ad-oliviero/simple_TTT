@@ -32,7 +32,7 @@ run:
 	$(SRC)/$(NAME)
 
 clean:
-	rm $(SRC)/$(NAME) $(OBJS) server
+	rm $(SRC)/$(NAME) $(OBJS)
 
 debug_build: CFLAGS = -g -Wall -Wextra
 debug_build: build

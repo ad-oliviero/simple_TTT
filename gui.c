@@ -1,4 +1,5 @@
-#include "raylib/include/raylib.h"
+#include "lib/raylib/include/raylib.h"
+#include "lib/raygui/src/raygui.h"
 #include <string.h>
 #include <stdlib.h>
 #include "include/main.h"

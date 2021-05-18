@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <unistd.h>
-#include "raylib/include/raylib.h"
+#include "lib/raylib/include/raylib.h"
 #include "include/gameplay.h"
 #include "include/gui.h"
 #include "include/main.h"

@@ -54,5 +54,6 @@ dkms.conf
 
 
 # raylib folders
-raylib/
-raylib-git/
+lib/raygui/
+lib/raylib/
+lib/raylib-git/

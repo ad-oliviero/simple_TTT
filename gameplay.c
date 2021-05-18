@@ -1,4 +1,8 @@
-#include "raylib/include/raylib.h"
+#include "lib/raylib/include/raylib.h"
+#define RAYGUI_IMPLEMENTATION
+#define RAYGUI_SUPPORT_ICONS
+#define RAYGUI_STATIC
+#include "lib/raygui/src/raygui.h"
 #include <unistd.h>
 #include <stdio.h>
 #include "include/main.h"
@@ -51,30 +55,21 @@ int checkwinner()
 
 void endGame(int winner)
 {
-	DrawRectangle(0, 0, GetScreenWidth(), GetScreenHeight(), Fade(RAYWHITE, .5f));
+	DrawRectangle(0, 0, GetScreenWidth(), GetScreenHeight(), Fade(BLACK, .8f));
 	Rectangle restart_btn = {SCR_WIDTH / 5, SCR_HEIGHT / 3, SCR_WIDTH / 5 * 3, SCR_HEIGHT / 10};
-	DrawRectangleRounded(restart_btn, .7f, 20, DARKGRAY);
-	DrawRectangleRoundedLines(restart_btn, .7f, 100, 5, RED);
+	char restart_text[32] = "Draw...";
+	// DrawRectangleRounded(restart_btn, .7f, 20, DARKGRAY);
+	// DrawRectangleRoundedLines(restart_btn, .7f, 100, 5, RED);
 
 	if (winner == 1)
-	{
-		DrawText("Player 1 (X) WON!", SCR_WIDTH / 3.3f, SCR_HEIGHT / 2.7f, 20, BLACK);
-	}
+		sprintf(restart_text, "Player 1 (X) WON!");
 	else if (winner == 2)
-	{
-		DrawText("Player 2 (O) WON!", SCR_WIDTH / 3.3f, SCR_HEIGHT / 2.7f, 20, BLACK);
-	}
-	else if (winner == 3)
-	{
-		DrawText("Draw...", SCR_WIDTH / 2.45f, SCR_HEIGHT / 2.74f, 30, BLACK);
-	}
+		sprintf(restart_text, "Player 2 (O) WON!");
 
-	if (CheckCollisionPointRec(GetMousePosition(), restart_btn) && IsMouseButtonPressed(MOUSE_LEFT_BUTTON))
+	if (GuiButton(restart_btn, restart_text))
 	{
 		for (int i = 0; i < 9; i++)
-		{
 			game_grid[i] = 0;
-		}
 		if (winner == 1)
 		{
 			winsP1++;
@@ -87,6 +82,5 @@ void endGame(int winner)
 		}
 		is_game_over = 0;
 		turn = !turn;
-		usleep(150000);
 	}
 }

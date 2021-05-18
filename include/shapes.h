@@ -1,4 +1,4 @@
-#include "../raylib/include/raylib.h"
+#include "../lib/raylib/include/raylib.h"
 
 void shape(Rectangle*, int*, int*);
 void cross(Rectangle*);
